@@ -14,7 +14,7 @@ class Node {
 public class LinkedListImp {
 
 
-    public static void printLinkedListForward(Node n1){
+     static void printLinkedListForward(Node n1){
         Node curr = n1; // start traversal from the head node
 
         while(curr != null){
