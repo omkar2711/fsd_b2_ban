@@ -1,3 +1,5 @@
+
+//Create Node class with data and next pointer
 class Node {
     int data;
     Node next;
@@ -10,8 +12,8 @@ class Node {
 
 public class linkedListOperations {
 
-    Node head;
-    public void addAtStart(int val){
+    Node head; // head of the linked list
+    public void addAtStart(int val){ // add a new node at the start of the linked list
         Node newNode = new Node(val);
         if(head == null){
             head = newNode;
@@ -23,7 +25,7 @@ public class linkedListOperations {
 
     }
 
-    public void addAtEnd(int val){
+    public void addAtEnd(int val){// add a new node at the end of the linked list
 
         Node newNode = new Node(val);
         if(head == null){
@@ -39,7 +41,7 @@ public class linkedListOperations {
 
     }
 
-    public void addAtPosition(int val, int pos){
+    public void addAtPosition(int val, int pos){ // add a new node at the given position in the linked list
         Node newNode = new Node(val);
 
         if(head == null){
@@ -58,7 +60,7 @@ public class linkedListOperations {
     }
 
 
-    public int deleteAtStart(){
+    public int deleteAtStart(){ // delete a node from the start of the linked list
 
         if(head == null){
             System.out.println("Cannot delete elements from the linkedlist as it is empty");
@@ -71,7 +73,7 @@ public class linkedListOperations {
     }
 
 
-    public int deleteAtEnd(){
+    public int deleteAtEnd(){ // delete a node from the end of the linked list
         if(head == null){
             System.out.println("Cannot delete elements from the linkedlist as it is empty");
             return -1;
@@ -86,7 +88,7 @@ public class linkedListOperations {
         return ele;
     }
 
-    public int deleteAtPostion(int pos){
+    public int deleteAtPostion(int pos){ // delete a node from the given position in the linked list
         if(head == null){
             System.out.println("Cannot delete elements from the linkedlist as it is empty");
             return -1;
@@ -104,7 +106,7 @@ public class linkedListOperations {
 
     }
 
-    public void printList(Node head){
+    public void printList(Node head){ // print the linked list
         Node curr = head;
 
         while(curr != null){
@@ -114,7 +116,7 @@ public class linkedListOperations {
         System.out.print("null");
     }
     public static void main(String[] args) {
-       linkedListOperations list = new linkedListOperations();
+       linkedListOperations list = new linkedListOperations(); // create a linked list object
         list.addAtStart(10);
         list.addAtStart(20);
         list.addAtStart(30);
@@ -125,11 +127,7 @@ public class linkedListOperations {
         System.out.println(list.deleteAtEnd());
         System.out.println(list.deleteAtPostion(1));
 
-
-     
-
-
-       list.printList(list.head);
+        list.printList(list.head); // print the linked list after performing the above operations
 
 
     }
